@@ -10,11 +10,12 @@ class Asteroid(CircleShape):
         self.num_points = num_points
         self.points = self.generate_points()
 
+    # Function to create the points on each asteroid.
     def generate_points(self):
         points = []
         for i in range(self.num_points):
             angle = i * (2 * math.pi / self.num_points)
-            radius_variation = random.uniform(0.8, 1.2)
+            radius_variation = random.uniform(0.7, 1.35)
             x = self.radius * radius_variation * math.cos(angle)
             y = self.radius * radius_variation * math.sin(angle)
             points.append((x, y))
